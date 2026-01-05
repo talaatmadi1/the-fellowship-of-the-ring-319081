@@ -74,7 +74,7 @@ The regression analysis focuses on predicting long-run show popularity, defined 
 The model uses only information available during the first 30 active days of a show. To reduce noise and ensure reliable early signals, only shows with at least 30 ratings within this period are considered, reducing the dataset from 14,531 shows to 772. These are split into training and test sets.
 
 The regression is performed on a log-transformed target, capturing relative growth patterns rather than absolute scale. On the test set, the model achieves:
-- R**2 ≈ 0.45
+- R^2 ≈ 0.45
 - RMSE ≈ 1.41
 - MAE ≈ 1.11
 
@@ -199,6 +199,7 @@ Overall, the combination of exploratory analysis, predictive modeling, and unsup
 
 ## LIMITATIONS & FUTURE WORK
 The analysis relies exclusively on interaction and rating data. The absence of economic variables, content descriptors, and user demographics limits deeper segmentation and profitability-oriented analysis. Including these dimensions would enable richer modeling and more detailed insights into engagement dynamics.
+
 
 
 
