@@ -1,5 +1,19 @@
 ## USER AND SHOW INTERACTION ANALYSIS IN A RATING PLATFORM
 
+##Group name : The Fellowship of the Ring
+
+##Team members:
+
+- Michele Elia (ID: 319081)
+
+- Talaat Ihab Mohamed Madi Mohamed OSMAN (ID: 321241)
+
+- Karol Cardillo Ciccione (ID: 320051)
+
+
+## USER AND SHOW INTERACTION ANALYSIS IN A RATING PLATFORM
+
+
 ## INTRODUCTION
 This project analyzes large scale rating data to understand how users interact with shows including both movies and TV series and how engagement is distributed across the catalog. The objective is to study user behavior and content reception from a behavioral perspective, focusing on interaction patterns rather than content semantics or recommendation accuracy.
 
@@ -187,6 +201,7 @@ Overall, the combination of exploratory analysis, predictive modeling, and unsup
 
 ## LIMITATIONS & FUTURE WORK
 The analysis relies exclusively on interaction and rating data. The absence of economic variables, content descriptors, and user demographics limits deeper segmentation and profitability-oriented analysis. Including these dimensions would enable richer modeling and more detailed insights into engagement dynamics.
+
 
 
 
