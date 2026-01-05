@@ -125,7 +125,6 @@ Shows generating mixed reactions and strong disagreement among viewers.
 Cluster 3 – Low-rated titles
 Shows characterized by consistently negative reception
 
-![Hierarchical clustering dendrogram for movie rating style](images/dendrogram_movie_rating_style.png)
 ![PCA visualization of movie rating-style clusters](images/movie_rating_style_pca.png)
 ![Summary of movie rating-style clusters: sizes, profiles, and distributions](images/movie_rating_style_cluster_summary.png)
 
@@ -179,3 +178,4 @@ Overall, the combination of exploratory analysis, predictive modeling, and unsup
 
 ## LIMITATIONS & FUTURE WORK
 The analysis relies exclusively on interaction and rating data. The absence of economic variables, content descriptors, and user demographics limits deeper segmentation and profitability-oriented analysis. Including these dimensions would enable richer modeling and more detailed insights into engagement dynamics.
+
