@@ -38,8 +38,8 @@ The exploratory data analysis aims to identify global engagement and rating patt
 
 Several robust patterns emerge:
 * Popularity bias: shows with few ratings display extreme average values and high variance, while shows with large audiences converge toward stable mean ratings between 3 and 4.
-* Temporal effects: shows released around 2004�2005 receive both high rating volume and relatively high average scores.
-* Content-type differences: movie ratings remain relatively stable over time, whereas TV series exhibit higher volatility, reflecting episodic consumption and stronger audience polarization.
+* Temporal effects: shows released around 2004-2005 receive both high rating volume and relatively high average scores.
+* Content type differences: movie ratings remain relatively stable over time, whereas TV series exhibit higher volatility, reflecting episodic consumption and stronger audience polarization.
 * Polarization: a small subset of shows exhibits very high rating standard deviation, identifying highly divisive titles that receive both very positive and very negative evaluations.
 Overall, the analysis highlights strong popularity effects, rating instability for low-support items, and systematic differences between movies and TV series in how ratings are expressed.
 
@@ -59,7 +59,7 @@ These results indicate moderate predictive accuracy, showing that early engageme
 ## CLUSTERING (USERS & SHOWS)
 
 
-Clustering is used to group users and shows into homogeneous segments based on observed behavior and rating characteristics. To avoid conflating different dimensions, clustering is performed separately on engagement-related features and rating-style features, each capturing a distinct aspect of interaction.
+Clustering is used to group users and shows into homogeneous segments based on observed behavior and rating characteristics. To avoid conflating different dimensions, clustering is performed separately on engagement related features and rating style features, each capturing a distinct aspect of interaction.
 
 ### Behavioral Clustering – Movies
 
@@ -89,7 +89,7 @@ For users, clustering is influenced by:
 - ratings per day
 - number of unique shows rated
 User behavior clusters
-- One-time users: very few ratings, short activity span, narrow interaction scope
+- One time users: very few ratings, short activity span, narrow interaction scope
 - Regular users: low but steady activity over time
 - Casual users: moderate rating volume and intensity
 - Power users: very high rating counts, long activity duration, wide catalog coverage
@@ -100,15 +100,15 @@ For shows, clustering is influenced by:
 - activity duration
 - ratings per day
 Show behavior clusters
-- Long-tail titles: very low popularity and limited reach
-- One-shot titles: brief spikes of attention
+- Long tail titles: very low popularity and limited reach
+- One shot titles: brief spikes of attention
 - Popular catalog titles: stable engagement over long periods
-- Blockbuster / evergreen titles: extremely high popularity and long-lasting visibility
+- Blockbuster / evergreen titles: extremely high popularity and long lasting visibility
 Differences across clusters span multiple orders of magnitude in engagement volume and persistence.
-Rating-Style Clustering (Hierarchical, 3 clusters)
-Rating-style clustering focuses on how evaluations are expressed, independently of interaction volume.
+Rating Style Clustering (Hierarchical, 3 clusters)
+Rating style clustering focuses on how evaluations are expressed, independently of interaction volume.
 
-### Rating-Style Clustering – Users
+### Rating Style Clustering – Users
 
 ![Hierarchical clustering dendrogram for user rating bias](images/dendrogram_user_rating_bias.png)
 ![PCA visualization of user rating-style clusters](images/user_rating_style_pca.png)
@@ -125,7 +125,7 @@ User rating styles
 - Moderate raters
 - Critical raters
 
-### Rating-Style Clustering – Shows
+### Rating Style Clustering – Shows
 
 ![Hierarchical clustering dendrogram for movie rating style](images/dendrogram_movie_rating_style.png)
 ![PCA visualization of movie rating-style clusters](images/movie_rating_style_pca.png)
@@ -141,40 +141,41 @@ For shows, clustering is influenced by:
 Show rating styles
 - High-rated / stable titles
 - Polarizing titles
-- Low-rated titles
+- Low rated titles
 
 ### CROSS-CLUSTER INTERACTION ANALYSIS
 
-To understand how the identified clusters interact, cross-cluster relationships are analyzed by examining interactions between user clusters and show clusters. This analysis reveals collective consumption dynamics that are not visible when clusters are considered in isolation.
+To understand how the identified clusters interact, cross cluster relationships are analyzed by examining interactions between user clusters and show clusters. This analysis reveals collective consumption dynamics that are not visible when clusters are considered in isolation.
 
 ### User behavior × Show behavior
 
 ![User behavior × movie behavior interaction heatmap](images/user_movie_behavior_interaction.png)
 
-Across all user behavioral segments, interactions are strongly concentrated on blockbuster and evergreen titles. Casual and one-time users almost exclusively consume highly popular shows, while regular users show only limited diversification. Even power users, despite their higher activity, remain primarily focused on blockbuster content.
+Across all user behavioral segments, interactions are strongly concentrated on blockbuster and evergreen titles. Casual and one time users almost exclusively consume highly popular shows, while regular users show only limited diversification. Even power users, despite their higher activity, remain primarily focused on blockbuster content.
 
 ### User rating style × Show rating style
 
 ![User rating style × movie rating style interaction heatmap](images/user_movie_rating_style_interaction.png)
 
 
-Across rating-style clusters, users interact most frequently with polarizing shows, regardless of individual rating bias. High-rated and stable titles receive comparatively fewer interactions.
-Overall, these interaction patterns show that popularity and polarization jointly shape platform dynamics, reinforcing concentration effects and limiting cross-cluster diversity.
+Across rating style clusters, users interact most frequently with polarizing shows, regardless of individual rating bias. High-rated and stable titles receive comparatively fewer interactions.
+Overall, these interaction patterns show that popularity and polarization jointly shape platform dynamics, reinforcing concentration effects and limiting cross cluster diversity.
 
 ## KEY FINDINGS
 - Engagement on the platform is highly concentrated, with a small fraction of shows accounting for a disproportionate share of interactions.
 - User activity is strongly heterogeneous; power users generate a large fraction of ratings despite being a minority.
-- Early engagement explains approximately 45% of the variance in long-run show popularity.
+- Early engagement explains approximately 45% of the variance in long run show popularity.
 - Consumption behavior is driven primarily by visibility and popularity, not by exploration.
 - Rating behavior exhibits systematic bias across users.
-- Polarizing shows attract more attention than consistently high-rated titles.
+- Polarizing shows attract more attention than consistently high rated titles.
 
 ## CONCLUSION
 
-This project provides a structured and data-driven analysis of user show interactions on a large-scale rating platform. By focusing exclusively on interaction data, the analysis reveals clear and interpretable patterns in engagement intensity, popularity dynamics, and rating behavior.
+This project provides a structured and data driven analysis of user show interactions on a large scale rating platform. By focusing exclusively on interaction data, the analysis reveals clear and interpretable patterns in engagement intensity, popularity dynamics, and rating behavior.
 The results show that platform activity is shaped by concentration effects rather than content diversity. Behavioral differences among users coexist with strong commonalities in consumption choices, while rating styles introduce an additional, independent dimension of variability.
 Overall, the combination of exploratory analysis, predictive modeling, and unsupervised learning proves effective in uncovering latent structure in complex interaction data.
 
 ## LIMITATIONS & FUTURE WORK
-The analysis relies exclusively on interaction and rating data. The absence of economic variables, content descriptors, and user demographics limits deeper segmentation and profitability-oriented analysis. Including these dimensions would enable richer modeling and more detailed insights into engagement dynamics.
+The analysis relies exclusively on interaction and rating data. The absence of economic variables, content descriptors, and user demographics limits deeper segmentation and profitability oriented analysis. Including these dimensions would enable richer modeling and more detailed insights into engagement dynamics.
+
 
