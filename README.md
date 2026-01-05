@@ -10,7 +10,7 @@ Overall, the work aims to provide insights into how attention concentrates on a 
 ![Dataset schema showing the relational structure of the rating platform](images/dataset_schema.png)
 
 
-The dataset describes a rating platform centered on shows and includes user�show interaction data collected over time. It consists of several relational tables containing individual rating events, show metadata, and aggregated statistics at both user and show level.
+The dataset describes a rating platform centered on shows and includes user show interaction data collected over time. It consists of several relational tables containing individual rating events, show metadata, and aggregated statistics at both user and show level.
 Overall, the dataset contains over 4 million rating interactions, more than 430,000 users, and approximately 14,500 distinct shows. While the catalog is dominated by movies, the presence of TV series is explicitly identified, allowing the analysis to account for differences between standalone and episodic content.
 This structure enables the study of engagement patterns at multiple levels, from individual interactions to aggregated behavioral profiles.
 
@@ -177,3 +177,4 @@ Overall, the combination of exploratory analysis, predictive modeling, and unsup
 
 ## LIMITATIONS & FUTURE WORK
 The analysis relies exclusively on interaction and rating data. The absence of economic variables, content descriptors, and user demographics limits deeper segmentation and profitability-oriented analysis. Including these dimensions would enable richer modeling and more detailed insights into engagement dynamics.
+
