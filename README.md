@@ -1,9 +1,9 @@
 ## USER AND SHOW INTERACTION ANALYSIS IN A RATING PLATFORM
 
 ## INTRODUCTION
-This project analyzes large-scale rating data to understand how users interact with shows including both movies and TV series and how engagement is distributed across the catalog. The objective is to study user behavior and content reception from a behavioral perspective, focusing on interaction patterns rather than content semantics or recommendation accuracy.
+This project analyzes large scale rating data to understand how users interact with shows including both movies and TV series and how engagement is distributed across the catalog. The objective is to study user behavior and content reception from a behavioral perspective, focusing on interaction patterns rather than content semantics or recommendation accuracy.
 
-The analysis adopts a data-driven approach that combines exploratory analysis, predictive modeling, and unsupervised learning to identify structural regularities in user activity, popularity dynamics, and rating behavior. By relying exclusively on interaction data, the project demonstrates that meaningful and interpretable patterns can be uncovered even in the absence of demographic or content-based features.
+The analysis adopts a data driven approach that combines exploratory analysis, predictive modeling, and unsupervised learning to identify structural regularities in user activity, popularity dynamics, and rating behavior. By relying exclusively on interaction data, the project demonstrates that meaningful and interpretable patterns can be uncovered even in the absence of demographic or content based features.
 
 Overall, the work aims to provide insights into how attention concentrates on a small subset of content, how users differ in engagement intensity and evaluation style, and how these dimensions interact to shape platform dynamics.
 
@@ -31,27 +31,31 @@ Overall, fewer than 0.4% of rows are discarded across all datasets, ensuring tha
 
 ![Highest rated movies and TV series with strong audience support](images/top_rated_movies_tv.png)
 
-![Heatmap of rating counts (1–5) by movie release year](images/ratings_heatmap_by_year.png)
-
-![Popularity bias: average rating versus number of ratings (log scale)](images/popularity_bias.png)
-
-![Evolution of average rating over time: movies versus TV series](images/rating_evolution_movies_vs_tv.png)
-
-![Most polarizing titles measured by rating variability](images/most_polarizing_titles.png)
 
 The exploratory data analysis aims to identify global engagement and rating patterns in the dataset. Rather than focusing on exhaustive descriptive statistics, the analysis highlights structural regularities that characterize user behavior and show reception.
 
 Several robust patterns emerge:
-* Popularity bias: shows with few ratings display extreme average values and high variance, while shows with large audiences converge toward stable mean ratings between 3 and 4.
-* Temporal effects: shows released around 2004�2005 receive both high rating volume and relatively high average scores.
-* Content-type differences: movie ratings remain relatively stable over time, whereas TV series exhibit higher volatility, reflecting episodic consumption and stronger audience polarization.
-* Polarization: a small subset of shows exhibits very high rating standard deviation, identifying highly divisive titles that receive both very positive and very negative evaluations.
+. Popularity bias: shows with few ratings display extreme average values and high variance, while shows with large audiences converge toward stable mean ratings between 3 and 4.
+
+![Popularity bias: average rating versus number of ratings (log scale)](images/popularity_bias.png)
+
+. Temporal effects: shows released around 2004/2005 receive both high rating volume and relatively high average scores.
+
+  ![Heatmap of rating counts (1–5) by movie release year](images/ratings_heatmap_by_year.png)
+  
+. Content type differences: movie ratings remain relatively stable over time, whereas TV series exhibit higher volatility, reflecting episodic consumption and stronger audience polarization.
+
+![Evolution of average rating over time: movies versus TV series](images/rating_evolution_movies_vs_tv.png)
+
+ Polarization: a small subset of shows exhibits very high rating standard deviation, identifying highly divisive titles that receive both very positive and very negative evaluations.
+
+![Most polarizing titles measured by rating variability](images/most_polarizing_titles.png)
 
 Overall, the analysis highlights strong popularity effects, rating instability for low-support items, and systematic differences between movies and TV series in how ratings are expressed.
 
 ## LINEAR REGRESSION
 
-![Predicting long-run popularity from the first 30 active days](images/early_popularity_prediction.png)
+
 
 The regression analysis focuses on predicting long-run show popularity, defined as the total number of ratings a show receives over its lifetime. Instead of modeling average ratings which are largely explained by linear aggregates the task targets a more informative outcome related to sustained user engagement.
 
@@ -63,6 +67,8 @@ The regression is performed on a log-transformed target, capturing relative grow
 * MAE ≈ 1.11
 
 These results indicate moderate predictive accuracy, showing that early engagement contains substantial information about long-run popularity while leaving room for uncertainty, especially for extremely popular shows.
+
+![Predicting long-run popularity from the first 30 active days](images/early_popularity_prediction.png)
 
 ## CLUSTERING (USERS & SHOWS)
 
@@ -181,5 +187,6 @@ Overall, the combination of exploratory analysis, predictive modeling, and unsup
 
 ## LIMITATIONS & FUTURE WORK
 The analysis relies exclusively on interaction and rating data. The absence of economic variables, content descriptors, and user demographics limits deeper segmentation and profitability-oriented analysis. Including these dimensions would enable richer modeling and more detailed insights into engagement dynamics.
+
 
 
