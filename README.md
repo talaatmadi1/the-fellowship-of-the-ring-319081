@@ -67,40 +67,44 @@ These results indicate moderate predictive accuracy, showing that early engageme
 ## CLUSTERING (USERS & SHOWS)
 
 
-Clustering is used to group users and shows into homogeneous segments based on observed behavior and rating characteristics. To avoid conflating different dimensions, clustering is performed separately on engagement-related features and rating-style features, each capturing a distinct aspect of interaction.
+Clustering is used to group users and shows into homogeneous segments based on observed behavior and rating characteristics. To avoid conflating different dimensions, clustering is performed separately on engagement related features and rating style features, each capturing a distinct aspect of interaction.
 
 ### Behavioral Clustering – K-means
-Behavioral clustering focuses on participation patterns, capturing how users and shows engage with the platform over time. This dimension describes differences in activity intensity, persistence, and overall involvement, independently of how ratings are expressed. The goal is to identify distinct behavioral roles within the platform ecosystem.
-### shows behavioral clustering
 
-Cluster 1 – Long tail titles
+Behavioral clustering focuses on participation patterns, capturing how users and shows engage with the platform over time. This dimension describes differences in activity intensity, persistence, and overall involvement, independently of how ratings are expressed. The goal is to identify distinct behavioral roles within the platform ecosystem.
+
+### Movie Behavioral Clusters
+
+Cluster 0 : Popular catalog titles :
+Shows dominating engagement, combining high visibility with long term persistence.
+
+Cluster 1 : One shot titles :
 Shows receiving very limited attention and remaining marginal in terms of engagement.
 
-Cluster 2 – One shot titles
+Cluster 2 : Long tail titles:
 Shows experiencing brief spikes of attention followed by rapid decline.
 
-Cluster 3 – Popular catalog titles
+Cluster 3 : Blockbuster / evergreen titles :
 Shows with stable and sustained engagement over long periods.
 
-Cluster 4 – Blockbuster / evergreen titles
-Shows dominating engagement, combining high visibility with long-term persistence.
+
 
 ![PCA visualization of movie behavioral clusters](images/movie_behavior_clusters_pca.png)
 ![Summary of movie behavioral clusters: sizes, profiles, and distributions](images/movie_behavior_cluster_summary.png)
 
 
-### User behavior clusters
+### User Behavior Clusters
 
-Cluster 1 – One-time users
+Cluster 0 : Casual users  :
 Users with very limited and short-lived activity, interacting with only a few shows in a narrow time window.
 
-Cluster 2 – Regular users
+Cluster 1 :  One-time users :
 Users who participate consistently over time but with low interaction volume and limited exploration.
 
-Cluster 3 – Casual users
+Cluster 2 : Regular users :
 The largest group of users, characterized by moderate engagement and a broader but still selective interaction with the catalog.
 
-Cluster 4 – Power users
+Cluster 3 : Power users :
 Highly active users with long participation spans and extensive interaction across the catalog.
 
 ![PCA visualization of user behavioral clusters](images/user_behavior_clusters_pca.png)
@@ -108,59 +112,58 @@ Highly active users with long participation spans and extensive interaction acro
 
 
 
-### Rating-Style Clustering – heratrchical
+### Rating Style Clustering – Hierarchical
 
 
-Rating-style clustering focuses on how evaluations are expressed, independently of interaction volume or popularity. This dimension captures systematic tendencies in rating behavior, describing differences in generosity, strictness, and opinion variability rather than differences in activity intensity.
+Rating style clustering focuses on how evaluations are expressed, independently of interaction volume or popularity. This dimension captures systematic tendencies in rating behavior, describing differences in generosity, strictness, and opinion variability rather than differences in activity intensity.
 
-### Shows rating styles
+### Movie Rating Style Clusters
 
 
-Cluster 1 – High-rated / stable titles
+Cluster 0 : High rated / stable titles :
 Shows receiving consistently positive evaluations.
 
-Cluster 2 – Polarizing titles
+Cluster 1 : Polarizing titles :
 Shows generating mixed reactions and strong disagreement among viewers.
 
-Cluster 3 – Low-rated titles
+Cluster 2 : Low rated titles :
 Shows characterized by consistently negative reception
 
 ![PCA visualization of movie rating-style clusters](images/movie_rating_style_pca.png)
 ![Summary of movie rating-style clusters: sizes, profiles, and distributions](images/movie_rating_style_cluster_summary.png)
 
-### User rating styles
-User rating styles
+### User Rating Style Clusters
 
-Cluster 1 – Generous raters
+Cluster 1 – Generous raters :
 Users who tend to assign higher ratings across most interactions.
 
-Cluster 2 – Moderate raters
+Cluster 2 – Moderate raters :
 Users whose ratings concentrate around neutral values.
 
-Cluster 3 – Critical raters
+Cluster 3 – Critical raters :
 Users who consistently assign lower and more compressed ratings.
 
 ![PCA visualization of user rating-style clusters](images/user_rating_style_pca.png)
 ![Summary of user rating-style clusters: sizes, profiles, and distributions](images/user_rating_style_cluster_summary.png)
 
 
-### CROSS-CLUSTER INTERACTION ANALYSIS
+### CROSS CLUSTER INTERACTION ANALYSIS
 
-To understand how the identified clusters interact, cross-cluster relationships are analyzed by examining interactions between user clusters and show clusters. This analysis reveals collective consumption dynamics that are not visible when clusters are considered in isolation.
+To understand how the identified clusters interact, cross cluster relationships are analyzed by examining interactions between user clusters and show clusters. This analysis reveals collective consumption dynamics that are not visible when clusters are considered in isolation.
 
 ### User behavior × Show behavior
 
 ![User behavior × movie behavior interaction heatmap](images/user_movie_behavior_interaction.png)
 
-Across all user behavioral segments, interactions are strongly concentrated on blockbuster and evergreen titles. Casual and one-time users almost exclusively consume highly popular shows, while regular users show only limited diversification. Even power users, despite their higher activity, remain primarily focused on blockbuster content.
+Across all user behavioral segments, interactions are strongly concentrated on blockbuster and evergreen titles. Casual and one time users almost exclusively consume highly popular shows, while regular users show only limited diversification. Even power users, despite their higher activity, remain primarily focused on blockbuster content.
 
 ### User rating style × Show rating style
 
 ![User rating style × movie rating style interaction heatmap](images/user_movie_rating_style_interaction.png)
 
 
-Across rating-style clusters, users interact most frequently with polarizing shows, regardless of individual rating bias. High-rated and stable titles receive comparatively fewer interactions.
-Overall, these interaction patterns show that popularity and polarization jointly shape platform dynamics, reinforcing concentration effects and limiting cross-cluster diversity.
+Across rating style clusters, users interact most frequently with polarizing shows, regardless of individual rating bias. High rated and stable titles receive comparatively fewer interactions.
+Overall, these interaction patterns show that popularity and polarization jointly shape platform dynamics, reinforcing concentration effects and limiting cross cluster diversity.
 
 ## KEY FINDINGS
 - Engagement on the platform is highly concentrated, with a small fraction of shows accounting for a disproportionate share of interactions.
@@ -168,14 +171,15 @@ Overall, these interaction patterns show that popularity and polarization jointl
 - Early engagement explains approximately 45% of the variance in long-run show popularity.
 - Consumption behavior is driven primarily by visibility and popularity, not by exploration.
 - Rating behavior exhibits systematic bias across users.
-- Polarizing shows attract more attention than consistently high-rated titles.
+- Polarizing shows attract more attention than consistently high rated titles.
 
 ## CONCLUSION
 
-This project provides a structured and data-driven analysis of user show interactions on a large-scale rating platform. By focusing exclusively on interaction data, the analysis reveals clear and interpretable patterns in engagement intensity, popularity dynamics, and rating behavior.
+This project provides a structured and data driven analysis of user show interactions on a large scale rating platform. By focusing exclusively on interaction data, the analysis reveals clear and interpretable patterns in engagement intensity, popularity dynamics, and rating behavior.
 The results show that platform activity is shaped by concentration effects rather than content diversity. Behavioral differences among users coexist with strong commonalities in consumption choices, while rating styles introduce an additional, independent dimension of variability.
 Overall, the combination of exploratory analysis, predictive modeling, and unsupervised learning proves effective in uncovering latent structure in complex interaction data.
 
 ## LIMITATIONS & FUTURE WORK
 The analysis relies exclusively on interaction and rating data. The absence of economic variables, content descriptors, and user demographics limits deeper segmentation and profitability-oriented analysis. Including these dimensions would enable richer modeling and more detailed insights into engagement dynamics.
+
 
