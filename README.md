@@ -1,8 +1,6 @@
-## USER AND SHOW INTERACTION ANALYSIS IN A RATING PLATFORM
+## Group name : The Fellowship of the Ring
 
-##Group name : The Fellowship of the Ring
-
-##Team members:
+## Team members:
 
 - Michele Elia (ID: 319081)
 
@@ -201,6 +199,7 @@ Overall, the combination of exploratory analysis, predictive modeling, and unsup
 
 ## LIMITATIONS & FUTURE WORK
 The analysis relies exclusively on interaction and rating data. The absence of economic variables, content descriptors, and user demographics limits deeper segmentation and profitability-oriented analysis. Including these dimensions would enable richer modeling and more detailed insights into engagement dynamics.
+
 
 
 
