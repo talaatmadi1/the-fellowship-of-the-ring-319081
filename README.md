@@ -35,15 +35,15 @@ Overall, fewer than 0.4% of rows are discarded across all datasets, ensuring tha
 The exploratory data analysis aims to identify global engagement and rating patterns in the dataset. Rather than focusing on exhaustive descriptive statistics, the analysis highlights structural regularities that characterize user behavior and show reception.
 
 Several robust patterns emerge:
-.Popularity bias: shows with few ratings display extreme average values and high variance, while shows with large audiences converge toward stable mean ratings between 3 and 4.
+- Popularity bias: shows with few ratings display extreme average values and high variance, while shows with large audiences converge toward stable mean ratings between 3 and 4.
 
 ![Popularity bias: average rating versus number of ratings (log scale)](images/popularity_bias.png)
 
-. Temporal effects: shows released around 2004/2005 receive both high rating volume and relatively high average scores.
+- Temporal effects: shows released around 2004/2005 receive both high rating volume and relatively high average scores.
 
   ![Heatmap of rating counts (1–5) by movie release year](images/ratings_heatmap_by_year.png)
   
-. Content type differences: movie ratings remain relatively stable over time, whereas TV series exhibit higher volatility, reflecting episodic consumption and stronger audience polarization.
+- Content type differences: movie ratings remain relatively stable over time, whereas TV series exhibit higher volatility, reflecting episodic consumption and stronger audience polarization.
 
 ![Evolution of average rating over time: movies versus TV series](images/rating_evolution_movies_vs_tv.png)
 
@@ -62,9 +62,9 @@ The regression analysis focuses on predicting long-run show popularity, defined 
 The model uses only information available during the first 30 active days of a show. To reduce noise and ensure reliable early signals, only shows with at least 30 ratings within this period are considered, reducing the dataset from 14,531 shows to 772. These are split into training and test sets.
 
 The regression is performed on a log-transformed target, capturing relative growth patterns rather than absolute scale. On the test set, the model achieves:
-. R**2 ≈ 0.45
-. RMSE ≈ 1.41
-. MAE ≈ 1.11
+- R**2 ≈ 0.45
+- RMSE ≈ 1.41
+- MAE ≈ 1.11
 
 These results indicate moderate predictive accuracy, showing that early engagement contains substantial information about long-run popularity while leaving room for uncertainty, especially for extremely popular shows.
 
@@ -172,12 +172,12 @@ Across rating style clusters, users interact most frequently with polarizing sho
 Overall, these interaction patterns show that popularity and polarization jointly shape platform dynamics, reinforcing concentration effects and limiting cross cluster diversity.
 
 ## KEY FINDINGS
-. Engagement on the platform is highly concentrated, with a small fraction of shows accounting for a disproportionate share of interactions.
-. User activity is strongly heterogeneous; power users generate a large fraction of ratings despite being a minority.
-. Early engagement explains approximately 45% of the variance in long-run show popularity.
-. Consumption behavior is driven primarily by visibility and popularity, not by exploration.
-. Rating behavior exhibits systematic bias across users.
-. Polarizing shows attract more attention than consistently high rated titles.
+- Engagement on the platform is highly concentrated, with a small fraction of shows accounting for a disproportionate share of interactions.
+- User activity is strongly heterogeneous; power users generate a large fraction of ratings despite being a minority.
+- Early engagement explains approximately 45% of the variance in long-run show popularity.
+- Consumption behavior is driven primarily by visibility and popularity, not by exploration.
+- Rating behavior exhibits systematic bias across users.
+- Polarizing shows attract more attention than consistently high rated titles.
 
 ## CONCLUSION
 
@@ -187,6 +187,7 @@ Overall, the combination of exploratory analysis, predictive modeling, and unsup
 
 ## LIMITATIONS & FUTURE WORK
 The analysis relies exclusively on interaction and rating data. The absence of economic variables, content descriptors, and user demographics limits deeper segmentation and profitability-oriented analysis. Including these dimensions would enable richer modeling and more detailed insights into engagement dynamics.
+
 
 
 
