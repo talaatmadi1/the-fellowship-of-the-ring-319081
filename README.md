@@ -12,7 +12,7 @@ Overall, the work aims to provide insights into how attention concentrates on a 
 ![Dataset schema showing the relational structure of the rating platform](images/dataset_schema.png)
 
 
-The dataset describes a rating platform centered on shows and includes user�show interaction data collected over time. It consists of several relational tables containing individual rating events, show metadata, and aggregated statistics at both user and show level.
+The dataset describes a rating platform centered on shows and includes user show interaction data collected over time. It consists of several relational tables containing individual rating events, show metadata, and aggregated statistics at both user and show level.
 
 Overall, the dataset contains over 4 million rating interactions, more than 430,000 users, and approximately 14,500 distinct shows. While the catalog is dominated by movies, the presence of TV series is explicitly identified, allowing the analysis to account for differences between standalone and episodic content.
 
@@ -23,7 +23,7 @@ This structure enables the study of engagement patterns at multiple levels, from
 
 Data handling focuses on ensuring internal consistency and reliability while preserving the original scale of the dataset. Missing values and invalid entries are analyzed column by column across all tables, and cleaning decisions are applied selectively rather than uniformly.
 
-Invalid rating values outside the valid range are identified and corrected, while missing ratings are handled conservatively to avoid unnecessary data loss. Aggregated user- and show-level statistics are validated and reconstructed from the cleaned interaction data when needed. Only records that cannot be reliably recovered are removed.
+Invalid rating values outside the valid range are identified and corrected, while missing ratings are handled conservatively to avoid unnecessary data loss. Aggregated user- and show level statistics are validated and reconstructed from the cleaned interaction data when needed. Only records that cannot be reliably recovered are removed.
 
 Overall, fewer than 0.4% of rows are discarded across all datasets, ensuring that the analysis is based on a large and representative sample while maintaining data quality.
 
@@ -104,7 +104,7 @@ Shows with stable and sustained engagement over long periods.
 Cluster 0 : Casual users  :
 Users with very limited and short-lived activity, interacting with only a few shows in a narrow time window.
 
-Cluster 1 :  One-time users :
+Cluster 1 :  One time users :
 Users who participate consistently over time but with low interaction volume and limited exploration.
 
 Cluster 2 : Regular users :
@@ -187,6 +187,7 @@ Overall, the combination of exploratory analysis, predictive modeling, and unsup
 
 ## LIMITATIONS & FUTURE WORK
 The analysis relies exclusively on interaction and rating data. The absence of economic variables, content descriptors, and user demographics limits deeper segmentation and profitability-oriented analysis. Including these dimensions would enable richer modeling and more detailed insights into engagement dynamics.
+
 
 
 
