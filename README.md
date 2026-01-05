@@ -62,9 +62,9 @@ The regression analysis focuses on predicting long-run show popularity, defined 
 The model uses only information available during the first 30 active days of a show. To reduce noise and ensure reliable early signals, only shows with at least 30 ratings within this period are considered, reducing the dataset from 14,531 shows to 772. These are split into training and test sets.
 
 The regression is performed on a log-transformed target, capturing relative growth patterns rather than absolute scale. On the test set, the model achieves:
-* R**2 ≈ 0.45
-* RMSE ≈ 1.41
-* MAE ≈ 1.11
+. R**2 ≈ 0.45
+. RMSE ≈ 1.41
+. MAE ≈ 1.11
 
 These results indicate moderate predictive accuracy, showing that early engagement contains substantial information about long-run popularity while leaving room for uncertainty, especially for extremely popular shows.
 
@@ -140,13 +140,13 @@ Shows characterized by consistently negative reception
 
 ### User Rating Style Clusters
 
-Cluster 1 – Generous raters :
+Cluster 1 : Generous raters :
 Users who tend to assign higher ratings across most interactions.
 
-Cluster 2 – Moderate raters :
+Cluster 2 : Moderate raters :
 Users whose ratings concentrate around neutral values.
 
-Cluster 3 – Critical raters :
+Cluster 3 : Critical raters :
 Users who consistently assign lower and more compressed ratings.
 
 ![PCA visualization of user rating-style clusters](images/user_rating_style_pca.png)
@@ -172,12 +172,12 @@ Across rating style clusters, users interact most frequently with polarizing sho
 Overall, these interaction patterns show that popularity and polarization jointly shape platform dynamics, reinforcing concentration effects and limiting cross cluster diversity.
 
 ## KEY FINDINGS
-- Engagement on the platform is highly concentrated, with a small fraction of shows accounting for a disproportionate share of interactions.
-- User activity is strongly heterogeneous; power users generate a large fraction of ratings despite being a minority.
-- Early engagement explains approximately 45% of the variance in long-run show popularity.
-- Consumption behavior is driven primarily by visibility and popularity, not by exploration.
-- Rating behavior exhibits systematic bias across users.
-- Polarizing shows attract more attention than consistently high rated titles.
+. Engagement on the platform is highly concentrated, with a small fraction of shows accounting for a disproportionate share of interactions.
+. User activity is strongly heterogeneous; power users generate a large fraction of ratings despite being a minority.
+. Early engagement explains approximately 45% of the variance in long-run show popularity.
+. Consumption behavior is driven primarily by visibility and popularity, not by exploration.
+. Rating behavior exhibits systematic bias across users.
+. Polarizing shows attract more attention than consistently high rated titles.
 
 ## CONCLUSION
 
@@ -187,6 +187,7 @@ Overall, the combination of exploratory analysis, predictive modeling, and unsup
 
 ## LIMITATIONS & FUTURE WORK
 The analysis relies exclusively on interaction and rating data. The absence of economic variables, content descriptors, and user demographics limits deeper segmentation and profitability-oriented analysis. Including these dimensions would enable richer modeling and more detailed insights into engagement dynamics.
+
 
 
 
